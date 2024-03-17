@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* colors */
+  --sapphire-blue: #16648e;
+  --sapphire-blue-2: #156290;
+  --black: #000;
+  --white: #fff;
+  --chinese-silver: #c8c8c8;
+  --lighter-grey: #f5f7f9;
+
+  --dark: #1f2937;
+  --light-blue: #3882f6;
+  --grey: #e5e7eb;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: var(--white);
+  /* position: relative; */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.cls-main-header {
+  position: relative;
+  /* background-color: rgba(56, 130, 246, 0.75); */
+  color: var(--sapphire-blue);
+  height: 80px;
+  /* position: fixed;
+    top: 0;
+    left: 0; */
+  width: 100%;
+  box-shadow: 2px 2px 4px -1px var(--dark);
+  z-index: 99;
+  padding: 0 32px;
+}
+
+.cls-logo {
+  cursor: pointer;
+  /* background-color: violet; */
+  display: flex;
+  gap: 2px;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+#id-small {
+  font-size: 1.75rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+#id-check {
+  display: none;
+}
+
+.cls-check {
+  order: 1;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.cls-check span {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+#id-menu {
+  /* display: none; */
+}
+
+#id-close {
+  display: none;
+}
+
+.cls-navbar,
+.cls-nav-sect {
+  display: flex;
+  align-items: center;
+}
+
+.cls-nav-sect {
+  /* background-color: yellow; */
+  height: 100%;
+  gap: 16px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.cls-nav-sect-link span {
+  /* background-color: yellowgreen; */
+  /* height: 100%; */
+  line-height: 80px;
+  color: var(--sapphire-blue);
+  font-size: 1.5rem;
+}
+
+p {
+  /* background-color: turquoise; */
+  line-height: 80px;
+}
+
+.cls-navbar {
+  /* background-color: red; */
+  height: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.cls-nav-list {
+  background-color: var(--sapphire-blue);
+  padding: 32px 32px;
+  width: 70%;
+  min-height: 100vh;
+  position: fixed;
+  top: 80px;
+  right: -200%;
+  transition: all 0.3s ease-in-out;
+}
+.cls-nav-item {
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 32px;
+}
+.cls-nav-link {
+  display: block;
+  height: 100%;
+  color: var(--white);
+  font-size: 1.15rem;
+  padding: 0 16px;
+  transition: 0.3s ease-in;
+}
+
+.cls-nav-link:hover {
+  color: var(--sapphire-blue);
+  background: var(--white);
+}
+
+#id-check:checked ~ .cls-nav-list {
+  right: 0;
+}
