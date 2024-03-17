@@ -1,0 +1,226 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-accessory2-300x300.jpg",
+      "name": "Anchor Bracelet",
+      "category": "Accessories",
+      "price": 150.0,
+      "bestSeller": true
+    },
+    {
+      "id": 2,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans4-300x300.jpg",
+      "name": "Basic Gray Jeans",
+      "category": "Women",
+      "price": 150.0
+    },
+    {
+      "id": 3,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-hoodie1-300x300.jpg",
+      "name": "Black Hoodie",
+      "category": "Men",
+      "price": 150.0,
+      "bestSeller": true
+    },
+    {
+      "id": 4,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag2-300x300.jpg",
+      "name": "Black Over-the-shoulder Handbag",
+      "category": "Accessories",
+      "price": 150.0
+    },
+    {
+      "id": 5,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans2-300x300.jpg",
+      "name": "Blue Denim Jeans",
+      "category": "Women",
+      "price": 150.0
+    },
+    {
+      "id": 6,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans1-300x300.jpg",
+      "name": "Blue Denim Shorts",
+      "category": "Women",
+      "price": 150.0
+    },
+    {
+      "id": 7,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-hoodie2-300x300.jpg",
+      "name": "Blue Hoodie",
+      "category": "Men",
+      "price": 150.0
+    },
+    {
+      "id": 8,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt2-300x300.jpg",
+      "name": "Blue Tshirt",
+      "category": "Men",
+      "price": 40.0
+    },
+    {
+      "id": 9,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-accessory1-300x300.jpg",
+      "name": "Boho Bangle Bracelet",
+      "category": "Accessories",
+      "price": 150.0,
+      "bestSeller": true
+    },
+    {
+      "id": 10,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag4-300x300.jpg",
+      "name": "Bright Gold Purse With Chain",
+      "category": "Accessories",
+      "price": 150.0
+    },
+    {
+      "id": 11,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag3-300x300.jpg",
+      "name": "Bright Red Bag",
+      "category": "Accessories",
+      "price": 100.0,
+      "bestSeller": true
+    },
+    {
+      "id": 12,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-accessory3-300x300.jpg",
+      "name": "Buddha Bracelet",
+      "category": "Accessories",
+      "price": 150.0
+    },
+    {
+      "id": 13,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans2-300x300.jpg",
+      "name": "Dark Blue Denim Jeans",
+      "category": "Men",
+      "price": 150.0
+    },
+    {
+      "id": 14,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans1-300x300.jpg",
+      "name": "Dark Brown Jeans",
+      "category": "Men",
+      "price": 150.0
+    },
+    {
+      "id": 15,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans4-300x300.jpg",
+      "name": "Dark Gray Jeans",
+      "category": "Men",
+      "price": 150.0
+    },
+    {
+      "id": 15,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe5-300x300.jpg",
+      "name": "DNK Black Shoes",
+      "category": "Women",
+      "price": 175.0
+    },
+    {
+      "id": 16,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe1-300x300.jpg",
+      "name": "DNK Blue Shoes",
+      "category": "Men",
+      "price": 200.0
+    },
+    {
+      "id": 17,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/sports-shoe4-300x300.jpg",
+      "name": "DNK Green Shoes",
+      "category": "Men",
+      "price": 250.0,
+      "bestSeller": true
+    },
+    {
+      "id": 18,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt4-300x300.jpg",
+      "name": "DNK Green Tshirt",
+      "category": "Men",
+      "price": 42.0
+    },
+    {
+      "id": 19,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe2-300x300.jpg",
+      "name": "DNK Red Shoes",
+      "category": "Men",
+      "price": 150.0
+    },
+    {
+      "id": 20,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-300x300.jpg",
+      "name": "DNK Yellow Shoes",
+      "category": "Men",
+      "price": 150.0
+    },
+    {
+      "id": 21,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans3-300x300.jpg",
+      "name": "Faint Washed Denim Blue Jeans",
+      "category": "Men",
+      "price": 150.0
+    },
+    {
+      "id": 22,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt3-300x300.jpg",
+      "name": "Flamingo Tshirt",
+      "category": "Women",
+      "price": 25.0
+    },
+    {
+      "id": 23,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt7-300x300.jpg",
+      "name": "Gray Pattern Tshirt",
+      "category": "Women",
+      "price": 30.0
+    },
+    {
+      "id": 24,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-hoodie3-300x300.jpg",
+      "name": "Green Hoodie",
+      "category": "Men",
+      "price": 150.0
+    },
+    {
+      "id": 25,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt4-300x300.jpg",
+      "name": "Lemons Tshirt",
+      "category": "Women",
+      "price": 25.0
+    },
+    {
+      "id": 26,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag1-300x300.jpg",
+      "name": "Light Brown Purse",
+      "category": "Accessories",
+      "price": 150.0
+    },
+    {
+      "id": 27,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt1-300x300.jpg",
+      "name": "Purple Tshirt",
+      "category": "Women",
+      "price": 25.0
+    },
+    {
+      "id": 28,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-hoodie4.jpg-300x300.jpg",
+      "name": "Red Hoodie",
+      "category": "Men",
+      "price": 150.0
+    },
+    {
+      "id": 29,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans3-300x300.jpg",
+      "name": "Slim Fit Blue Jeans",
+      "category": "Women",
+      "price": 150.0
+    },
+    {
+      "id": 30,
+      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt4-300x300.jpg",
+      "name": "White Underground Tshirt",
+      "category": "Women",
+      "price": 150.0
+    }
+  ]
+}
