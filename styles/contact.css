@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* background-color: aqua; */
+}
+
+.cls-image-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 33%;
+  /* z-index: 1; */
+  /* Ensure the image stays on top of other content */
+}
+
+.cls-image-container img {
+  width: 100%;
+  height: 33%;
+}
+
+.cls-department {
+  display: inline-block;
+}
