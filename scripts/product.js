@@ -1,28 +1,36 @@
 const handleSlider = () => {
-  const slider = document.querySelector('#filter-slider-id');
-  const label = document.querySelector('#label-slider-id');
-  label.textContent = `$${slider.value}`
-}
+  const slider = document.querySelector("#filter-slider-id");
+  const label = document.querySelector("#label-slider-id");
+  label.textContent = `$${slider.value}`;
+  window.location.href = `?maxPrice=${slider.value}`;
+};
 
 const eventListenersConfig = [
   {
-    id: '#filter-slider-id',
-    action: 'input',
+    id: "#filter-slider-id",
+    action: "change",
     function: handleSlider,
-  }
-]
+  },
+];
 
 const setupEventListeners = () => {
   for (let config of eventListenersConfig) {
     const element = document.querySelector(config.id);
-    element.addEventListener(config.action, config.function, false)
+    element.addEventListener(config.action, config.function, false);
   }
-}
+};
 
-const fetchProducts = async () => {
+const fetchProducts = async (category, maxPrice) => {
+
   const response = await fetch("/mock-data/products.json");
   const data = await response.json();
-  return data.products;
+  return data.products.filter((product) => {
+    return (
+        !category || product.category.toLowerCase() === category.toLowerCase()
+      ) && (
+        !maxPrice || product.price <= maxPrice
+      )
+  });
 };
 
 const fetchBestSellers = async () => {
@@ -36,7 +44,6 @@ const fetchBestSellers = async () => {
 const renderProductCards = (products, parentSelector, childSelector) => {
   const productCardList = document.querySelector(`.${parentSelector}`);
   for (let product of products) {
-
     const listItem = document.createElement("li");
     listItem.classList.add(childSelector);
     listItem.innerHTML = `
@@ -59,12 +66,12 @@ const renderProductCards = (products, parentSelector, childSelector) => {
 };
 
 const main = async () => {
-  const products = await fetchProducts();
-  renderProductCards(
-    products,
-    "product-card-list",
-    "product-card"
+  const params = new URLSearchParams(window.location.search);
+  const products = await fetchProducts(
+    params.get("category"),
+    params.get("maxPrice")
   );
+  renderProductCards(products, "product-card-list", "product-card");
 
   const bestSellers = await fetchBestSellers();
   renderProductCards(
@@ -72,11 +79,8 @@ const main = async () => {
     "mini-product-card-list",
     "mini-product-card"
   );
-  
+
   setupEventListeners();
-
 };
-
-
 
 main();
