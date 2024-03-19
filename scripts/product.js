@@ -34,34 +34,43 @@ const fetchBestSellers = async () => {
 };
 
 const renderProductCards = (products, parentSelector, childSelector) => {
-  const productCardList = document.querySelector(parentSelector);
-  const firstProductCard = productCardList.querySelector(childSelector);
-
-  masterElement = firstProductCard.cloneNode(true);
-
-  while (productCardList.firstChild) {
-    productCardList.removeChild(productCardList.firstChild);
-  }
-
+  const productCardList = document.querySelector(`.${parentSelector}`);
   for (let product of products) {
-    const copy = masterElement.cloneNode(true);
-    copy.querySelector(".product-image").src = product.image;
-    copy.querySelector(".product-name").textContent = product.name;
-    copy.querySelector(".product-category").textContent = product.category;
-    copy.querySelector(".product-price").textContent = `$${product.price}.00`;
-    productCardList.appendChild(copy);
+
+    const listItem = document.createElement("li");
+    listItem.classList.add(childSelector);
+    listItem.innerHTML = `
+      <a href="#">
+        <img
+          class="product-image"
+          src="${product.image}"
+        />
+      </a>
+      <div>
+        <a href="#">
+          <h4 class="product-name">${product.name}</h4>
+        </a>
+        <span class="product-category">${product.category}</span>
+        <span class="product-price">${product.price}.00</span>
+      </div>
+    `;
+    productCardList.appendChild(listItem);
   }
 };
 
 const main = async () => {
   const products = await fetchProducts();
-  renderProductCards(products, ".product-card-list", ".product-card");
+  renderProductCards(
+    products,
+    "product-card-list",
+    "product-card"
+  );
 
   const bestSellers = await fetchBestSellers();
   renderProductCards(
     bestSellers,
-    ".mini-product-card-list",
-    ".mini-product-card"
+    "mini-product-card-list",
+    "mini-product-card"
   );
   
   setupEventListeners();
