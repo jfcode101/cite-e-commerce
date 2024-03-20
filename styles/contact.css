@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f5f7f9;
+}
+
+.cls-image-container {
+  width: 100%;
+}
+
+.cls-image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cls-department {
+  display: inline-block;
+  width: 200px;
+  background-color: white;
+  border: 2px solid teal;
+  border-radius: 5px;
+}
+
+.cls-department:hover {
+  box-shadow: 10px 10px 5px lightblue;
+}
+
+.cls-department p {
+  color: #0084d6;
+  font-weight: bold;
+}
+
+.cls-description {
+  color: black;
+}
