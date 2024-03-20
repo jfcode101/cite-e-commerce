@@ -1,15 +1,52 @@
-const handleSlider = () => {
+const handleSlider = (event) => {
   const slider = document.querySelector("#filter-slider-id");
+  slider.value = event.target.value;
+
   const label = document.querySelector("#label-slider-id");
-  label.textContent = `$${slider.value}`;
-  window.location.href = `?maxPrice=${slider.value}`;
+  label.textContent = `$${event.target.value}`;
+};
+
+const handlePriceFilter = () => {
+  const slider = document.querySelector("#filter-slider-id");
+  const category = getQueryParam("category");
+
+  const { origin, pathname } = window.location;
+  window.location.href =
+    `${origin}${pathname}?maxPrice=${slider.value}` +
+    (category ? `&category=${category}` : "");
+};
+
+const handleSelectCategory = (event) => {
+  const anchor = event.target.closest(".filter-category-option > a");
+  if (anchor) {
+    const maxPrice = getQueryParam("maxPrice");
+    const { origin, pathname } = window.location;
+    window.location.href =
+      `${origin}${pathname}?category=${anchor.textContent}` +
+      (maxPrice ? `&maxPrice=${maxPrice}` : "");
+  }
+};
+
+const getQueryParam = (key) => {
+  const params = new URLSearchParams(window.location.search);
+  return params.has(key) ? params.get(key) : undefined;
 };
 
 const eventListenersConfig = [
   {
     id: "#filter-slider-id",
-    action: "change",
+    action: "input",
     function: handleSlider,
+  },
+  {
+    id: "#btn-filter-id",
+    action: "click",
+    function: handlePriceFilter,
+  },
+  {
+    id: "#filter-category-list-id",
+    action: "click",
+    function: handleSelectCategory,
   },
 ];
 
@@ -21,15 +58,14 @@ const setupEventListeners = () => {
 };
 
 const fetchProducts = async (category, maxPrice) => {
-
   const response = await fetch("/mock-data/products.json");
   const data = await response.json();
   return data.products.filter((product) => {
     return (
-        !category || product.category.toLowerCase() === category.toLowerCase()
-      ) && (
-        !maxPrice || product.price <= maxPrice
-      )
+      (!category ||
+        product.category.toLowerCase() === category.toLowerCase()) &&
+      (!maxPrice || product.price <= maxPrice)
+    );
   });
 };
 
@@ -66,11 +102,13 @@ const renderProductCards = (products, parentSelector, childSelector) => {
 };
 
 const main = async () => {
-  const params = new URLSearchParams(window.location.search);
-  const products = await fetchProducts(
-    params.get("category"),
-    params.get("maxPrice")
-  );
+
+  const category = getQueryParam("category");
+  const maxPrice = getQueryParam("maxPrice");
+
+  handleSlider({ target: { value: maxPrice } });
+
+  const products = await fetchProducts(category, maxPrice);
   renderProductCards(products, "product-card-list", "product-card");
 
   const bestSellers = await fetchBestSellers();
