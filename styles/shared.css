@@ -54,6 +54,9 @@ li {
 .cls-logo {
   cursor: pointer;
   display: flex;
+}
+
+#id-upper {
   gap: 2px;
   font-size: 2rem;
   font-weight: 800;
