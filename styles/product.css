@@ -111,9 +111,6 @@ a:hover {
   color: rgb(51, 51, 51);
 }
 
-.best-seller-items {
-}
-
 .section {
   background-color: white;
   padding: 2rem 1rem 0;
@@ -158,11 +155,6 @@ a:hover {
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-}
-
-/*  */
-
-.mini-product-card-list {
 }
 
 .mini-product-card {
