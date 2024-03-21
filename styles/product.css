@@ -30,8 +30,8 @@ a:hover {
 }
 /******************************************/
 
-.header,
-.footer {
+.cls-header,
+.cls-footer {
   height: 100px;
   width: 100%;
   background-color: white;
@@ -41,40 +41,40 @@ a:hover {
   border: 1px solid rgb(221, 221, 221);
 }
 
-.main {
+.cls-main {
   display: flex;
   flex-direction: column-reverse;
   margin: 0 auto;
   padding: 1rem;
 }
 
-.aside {
+.cls-aside {
   flex-shrink: 0;
   padding-top: 1rem;
 }
 
-.filter-block {
+.cls-filter-block {
   margin-bottom: 4rem;
 }
 
-.filter-title {
+.cls-filter-title {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1rem;
 }
 
-.filter-category-option {
+.cls-filter-category-option {
   padding: 2px 0;
   font-size: 1rem;
   margin-bottom: 0.7rem;
   color: rgb(51, 51, 51);
 }
 
-.filter-search {
+.cls-filter-search {
   display: flex;
 }
 
-.filter-search > input {
+.cls-filter-search > input {
   border: 1px solid #e2e2e2;
   flex-grow: 1;
   line-height: 1.8;
@@ -82,7 +82,7 @@ a:hover {
   border-radius: 0;
   margin-right: 6px;
 }
-.standard-button {
+.cls-standard-button {
   padding: 0 0.8rem;
   background-color: #0084d6;
   color: white;
@@ -90,74 +90,74 @@ a:hover {
   cursor: pointer;
 }
 
-.filter-slider {
+.cls-filter-slider {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.filter-max-price {
+.cls-filter-max-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 35px;
 }
 
-.filter-max-price span {
+.cls-filter-max-price span {
   font-size: 0.9rem;
   color: rgba(51, 51, 51, 0.6);
 }
 
-.filter-max-price #label-slider-id {
+.cls-filter-max-price #id-label-slider {
   color: rgb(51, 51, 51);
 }
 
-.section {
+.cls-section {
   background-color: white;
   padding: 2rem 1rem 0;
   flex-grow: 1;
 }
 
-#result-count-id {
+#id-result-count {
   margin-bottom: 2rem;
 }
 
-.product-card-list {
+.cls-product-card-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.product-card {
+.cls-product-card {
   width: calc((100% - 20px) / 2);
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
-.product-card .product-image {
+.cls-product-card .cls-product-image {
   width: 100%;
   aspect-ratio: 1;
   margin-bottom: 0.8rem;
 }
-.product-card .product-name {
+.cls-product-card .cls-product-name {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
-.product-card .product-category {
+.cls-product-card .cls-product-category {
   font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
   color: rgba(51, 51, 51, 0.6);
   display: block;
 }
-.product-card .product-price {
+.cls-product-card .cls-product-price {
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-.mini-product-card {
+.cls-mini-product-card {
   display: flex;
   gap: 10px;
   justify-content: flex-start;
@@ -166,27 +166,27 @@ a:hover {
   padding: 1rem 0;
 }
 
-.mini-product-card:last-of-type {
+.cls-mini-product-card:last-of-type {
   border: 0;
 }
 
-.mini-product-card .product-image {
+.cls-mini-product-card .cls-product-image {
   width: 64px;
   aspect-ratio: 1;
 }
-.mini-product-card .product-name {
+.cls-mini-product-card .cls-product-name {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
-.mini-product-card .product-category {
+.cls-mini-product-card .cls-product-category {
   font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
   color: rgba(51, 51, 51, 0.6);
   display: none;
 }
-.mini-product-card .product-price {
+.cls-mini-product-card .cls-product-price {
   font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
@@ -195,11 +195,11 @@ a:hover {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 600px) {
-  .product-card {
+  .cls-product-card {
     width: calc((100% - 40px) / 3);
   }
 
-  .section {
+  .cls-section {
     padding: 2rem 1rem 0;
   }
 
@@ -207,19 +207,19 @@ a:hover {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .main {
+  .cls-main {
     flex-direction: row;
     max-width: 1360px;
     padding: 4rem 1rem;
   }
 
-  .aside {
+  .cls-aside {
     width: 330px;
     padding-right: 60px;
     padding-top: 0;
   }
 
-  .section {
+  .cls-section {
     padding: 5rem 7rem;
   }
 

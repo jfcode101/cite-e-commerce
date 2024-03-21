@@ -1,10 +1,10 @@
 const handleSlider = (event) => {
-  const label = document.querySelector("#label-slider-id");
+  const label = document.querySelector("#id-label-slider");
   label.textContent = `$${event.target.value}`;
 };
 
 const handlePriceFilter = () => {
-  const slider = document.querySelector("#filter-slider-id");
+  const slider = document.querySelector("#id-filter-slider");
   const { origin, pathname } = window.location;
   const queryParams = objToQueryParam({
     ...queryParamToObj(),
@@ -15,7 +15,7 @@ const handlePriceFilter = () => {
 };
 
 const handleSelectCategory = (event) => {
-  const anchor = event.target.closest(".filter-category-option > a");
+  const anchor = event.target.closest(".cls-filter-category-option > a");
   if (anchor) {
     const { origin, pathname } = window.location;
     const queryParams = objToQueryParam({
@@ -27,7 +27,7 @@ const handleSelectCategory = (event) => {
 };
 
 const handleSearchProduct = () => {
-  const prodName = document.querySelector("#filter-search-text-id");
+  const prodName = document.querySelector("#id-filter-search-text");
   const { origin, pathname } = window.location;
   const queryParams = objToQueryParam({
     ...queryParamToObj(),
@@ -43,22 +43,22 @@ const getQueryParam = (key) => {
 
 const eventListenersConfig = [
   {
-    id: "#filter-slider-id",
+    id: "#id-filter-slider",
     action: "input",
     function: handleSlider,
   },
   {
-    id: "#btn-filter-id",
+    id: "#id-btn-filter",
     action: "click",
     function: handlePriceFilter,
   },
   {
-    id: "#filter-category-list-id",
+    id: "#id-filter-category-list",
     action: "click",
     function: handleSelectCategory,
   },
   {
-    id: "#filter-search-btn-id",
+    id: "#id-filter-search-btn",
     action: "click",
     function: handleSearchProduct,
   },
@@ -121,16 +121,16 @@ const renderProductCards = (products, parentSelector, childSelector) => {
     listItem.innerHTML = `
       <a href="#">
         <img
-          class="product-image"
+          class="cls-product-image"
           src="${product.image}"
         />
       </a>
       <div>
         <a href="#">
-          <h4 class="product-name">${product.name}</h4>
+          <h4 class="cls-product-name">${product.name}</h4>
         </a>
-        <span class="product-category">${product.category}</span>
-        <span class="product-price">${product.price}.00</span>
+        <span class="cls-product-category">${product.category}</span>
+        <span class="cls-product-price">${product.price}.00</span>
       </div>
     `;
     productCardList.appendChild(listItem);
@@ -139,12 +139,12 @@ const renderProductCards = (products, parentSelector, childSelector) => {
 
 const loadCurrentQueryParams = () => {
   const currConfig = queryParamToObj();
-  document.querySelector("#filter-search-text-id").value = currConfig.prodName;
-  document.querySelector("#filter-slider-id").value = currConfig.maxPrice;
+  document.querySelector("#id-filter-search-text").value = currConfig.prodName;
+  document.querySelector("#id-filter-slider").value = currConfig.maxPrice;
   document.querySelector(
-    "#label-slider-id"
+    "#id-label-slider"
   ).textContent = `$${currConfig.maxPrice}`;
-  document.querySelector("#result-count-id").textContent = `Results for ${
+  document.querySelector("#id-result-count").textContent = `Results for ${
     currConfig.category ? currConfig.category.toLowerCase() : ""
   } items below $${currConfig.maxPrice}`;
   return currConfig;
@@ -153,13 +153,13 @@ const loadCurrentQueryParams = () => {
 const main = async () => {
   const { category, maxPrice, prodName } = loadCurrentQueryParams();
   const products = await fetchProducts(category, maxPrice, prodName);
-  renderProductCards(products, "product-card-list", "product-card");
+  renderProductCards(products, "cls-product-card-list", "cls-product-card");
 
   const bestSellers = await fetchBestSellers();
   renderProductCards(
     bestSellers,
-    "mini-product-card-list",
-    "mini-product-card"
+    "cls-mini-product-card-list",
+    "cls-mini-product-card"
   );
 
   setupEventListeners();
