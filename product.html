@@ -12,10 +12,10 @@
     <main class="main">
       <aside class="aside">
         <div class="filter-block">
-          <form class="filter-search">
-            <input type="text" placeholder="Search products..." />
-            <button class="standard-button">Go</button>
-          </form>
+          <div class="filter-search">
+            <input type="text" placeholder="Search products..." id="filter-search-text-id"/>
+            <button class="standard-button" id="filter-search-btn-id">Go</button>
+          </div>
         </div>
         <div class="filter-block">
           <h3 class="filter-title">Filter by Price</h3>
@@ -28,13 +28,13 @@
           <h3 class="filter-title">Categories</h3>
           <ul id="filter-category-list-id">
             <li class="filter-category-option">
-              <a>Accessories</a><span>(7)</span>
+              <a>Accessories</a>
             </li>
             <li class="filter-category-option">
-              <a>Men</a><span>(14)</span>
+              <a>Men</a>
             </li>
             <li class="filter-category-option">
-              <a>Women</a><span>(17)</span>
+              <a>Women</a>
             </li>
           </ul>
         </div>
@@ -46,7 +46,7 @@
         </div>
       </aside>
       <section class="section">
-        <h3 class="result-count">Showing 1-12 of 31 results</h3>
+        <h3 id="result-count-id">Showing 1-12 of 31 results</h3>
         <ul class="product-card-list">
         </ul>
       </section>

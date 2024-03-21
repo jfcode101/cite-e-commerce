@@ -1,30 +1,39 @@
 const handleSlider = (event) => {
-  const slider = document.querySelector("#filter-slider-id");
-  slider.value = event.target.value;
-
   const label = document.querySelector("#label-slider-id");
   label.textContent = `$${event.target.value}`;
 };
 
 const handlePriceFilter = () => {
   const slider = document.querySelector("#filter-slider-id");
-  const category = getQueryParam("category");
-
   const { origin, pathname } = window.location;
-  window.location.href =
-    `${origin}${pathname}?maxPrice=${slider.value}` +
-    (category ? `&category=${category}` : "");
+  const queryParams = objToQueryParam({
+    ...queryParamToObj(),
+    maxPrice: slider.value,
+  });
+
+  window.location.href = `${origin}${pathname}?${queryParams}`;
 };
 
 const handleSelectCategory = (event) => {
   const anchor = event.target.closest(".filter-category-option > a");
   if (anchor) {
-    const maxPrice = getQueryParam("maxPrice");
     const { origin, pathname } = window.location;
-    window.location.href =
-      `${origin}${pathname}?category=${anchor.textContent}` +
-      (maxPrice ? `&maxPrice=${maxPrice}` : "");
+    const queryParams = objToQueryParam({
+      ...queryParamToObj(),
+      category: anchor.textContent,
+    });
+    window.location.href = `${origin}${pathname}?${queryParams}`;
   }
+};
+
+const handleSearchProduct = () => {
+  const prodName = document.querySelector("#filter-search-text-id");
+  const { origin, pathname } = window.location;
+  const queryParams = objToQueryParam({
+    ...queryParamToObj(),
+    prodName: prodName.value,
+  });
+  window.location.href = `${origin}${pathname}?${queryParams}`;
 };
 
 const getQueryParam = (key) => {
@@ -48,7 +57,33 @@ const eventListenersConfig = [
     action: "click",
     function: handleSelectCategory,
   },
+  {
+    id: "#filter-search-btn-id",
+    action: "click",
+    function: handleSearchProduct,
+  },
 ];
+
+const queryParamToObj = () => {
+  const currentFilters = { maxPrice: 1000, prodName: "" };
+  const params = new URLSearchParams(window.location.search);
+  params.forEach((value, key) => {
+    currentFilters[key] = value;
+  });
+  return currentFilters;
+};
+
+const objToQueryParam = (obj) => {
+  const url = Object.keys(obj)
+    .map((key) => {
+      const value = obj[key];
+      return `${key}=${value}`;
+    })
+    .filter((param) => param != "")
+    .join("&");
+
+  return url;
+};
 
 const setupEventListeners = () => {
   for (let config of eventListenersConfig) {
@@ -57,14 +92,15 @@ const setupEventListeners = () => {
   }
 };
 
-const fetchProducts = async (category, maxPrice) => {
+const fetchProducts = async (category, maxPrice, prodName) => {
   const response = await fetch("/mock-data/products.json");
   const data = await response.json();
   return data.products.filter((product) => {
     return (
       (!category ||
         product.category.toLowerCase() === category.toLowerCase()) &&
-      (!maxPrice || product.price <= maxPrice)
+      (!maxPrice || product.price <= maxPrice) &&
+      (!prodName || product.name.toLowerCase().includes(prodName.toLowerCase()))
     );
   });
 };
@@ -101,14 +137,22 @@ const renderProductCards = (products, parentSelector, childSelector) => {
   }
 };
 
+const loadCurrentQueryParams = () => {
+  const currConfig = queryParamToObj();
+  document.querySelector("#filter-search-text-id").value = currConfig.prodName;
+  document.querySelector("#filter-slider-id").value = currConfig.maxPrice;
+  document.querySelector(
+    "#label-slider-id"
+  ).textContent = `$${currConfig.maxPrice}`;
+  document.querySelector("#result-count-id").textContent = `Results for ${
+    currConfig.category ? currConfig.category.toLowerCase() : ""
+  } items below $${currConfig.maxPrice}`;
+  return currConfig;
+};
+
 const main = async () => {
-
-  const category = getQueryParam("category");
-  const maxPrice = getQueryParam("maxPrice");
-
-  handleSlider({ target: { value: maxPrice } });
-
-  const products = await fetchProducts(category, maxPrice);
+  const { category, maxPrice, prodName } = loadCurrentQueryParams();
+  const products = await fetchProducts(category, maxPrice, prodName);
   renderProductCards(products, "product-card-list", "product-card");
 
   const bestSellers = await fetchBestSellers();
