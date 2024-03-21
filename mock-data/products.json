@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-accessory2-300x300.jpg",
+      "image": "https://images.unsplash.com/photo-1602751584581-2e0372975b46?q=50&w=250&h=250&fit=crop",
       "name": "Anchor Bracelet",
       "category": "Accessories",
       "price": 150.0,
@@ -10,72 +10,72 @@
     },
     {
       "id": 2,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans4-300x300.jpg",
+      "image": "https://plus.unsplash.com/premium_photo-1671031352716-62b834274197?q=50&w=250&h=250&fit=crop",
       "name": "Basic Gray Jeans",
       "category": "Women",
       "price": 150.0
     },
     {
       "id": 3,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-hoodie1-300x300.jpg",
-      "name": "Black Hoodie",
+      "image": "https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?q=50&w=250&h=250&fit=crop",
+      "name": "White Hoodie",
       "category": "Men",
       "price": 150.0,
       "bestSeller": true
     },
     {
       "id": 4,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag2-300x300.jpg",
-      "name": "Black Over-the-shoulder Handbag",
+      "image": "https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?q=50&w=250&h=250&fit=crop",
+      "name": "Brown Over-the-shoulder Handbag",
       "category": "Accessories",
       "price": 150.0
     },
     {
       "id": 5,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans2-300x300.jpg",
+      "image": "https://images.unsplash.com/photo-1637069585336-827b298fe84a?q=50&w=250&h=250&fit=crop",
       "name": "Blue Denim Jeans",
       "category": "Women",
       "price": 150.0
     },
     {
       "id": 6,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans1-300x300.jpg",
+      "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?q=50&w=250&h=250&fit=crop",
       "name": "Blue Denim Shorts",
       "category": "Women",
       "price": 150.0
     },
     {
       "id": 7,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-hoodie2-300x300.jpg",
-      "name": "Blue Hoodie",
+      "image": "https://images.unsplash.com/photo-1543076447-215ad9ba6923?q=50&w=250&h=250&fit=crop",
+      "name": "Warm Denim Jacket",
       "category": "Men",
       "price": 150.0
     },
     {
       "id": 8,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt2-300x300.jpg",
-      "name": "Blue Tshirt",
+      "image": "https://images.unsplash.com/photo-1613129636600-80409eac1d07?q=50&w=250&h=250&fit=crop",
+      "name": "Grey Hoodie",
       "category": "Men",
       "price": 40.0
     },
     {
       "id": 9,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-accessory1-300x300.jpg",
-      "name": "Boho Bangle Bracelet",
+      "image": "https://images.unsplash.com/photo-1632639271915-1af811bce14e?q=50&w=250&h=250&fit=crop",
+      "name": "Bow Tie",
       "category": "Accessories",
       "price": 150.0,
       "bestSeller": true
     },
     {
       "id": 10,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag4-300x300.jpg",
-      "name": "Bright Gold Purse With Chain",
+      "image": "https://images.unsplash.com/photo-1605733513597-a8f8341084e6?q=50&w=250&h=250&fit=crop",
+      "name": "Pale Perl Purse With Chain",
       "category": "Accessories",
       "price": 150.0
     },
     {
       "id": 11,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag3-300x300.jpg",
+      "image": "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?q=50&w=250&h=250&fit=crop",
       "name": "Bright Red Bag",
       "category": "Accessories",
       "price": 100.0,
@@ -83,142 +83,142 @@
     },
     {
       "id": 12,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-accessory3-300x300.jpg",
-      "name": "Buddha Bracelet",
+      "image": "https://images.unsplash.com/photo-1615655114865-4cc1bda5901e?q=50&w=250&h=250&fit=crop",
+      "name": "Buddha Earrings",
       "category": "Accessories",
       "price": 150.0
     },
     {
       "id": 13,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans2-300x300.jpg",
+      "image": "https://plus.unsplash.com/premium_photo-1674828600712-7d0caab39109?q=50&w=250&h=250&fit=crop",
       "name": "Dark Blue Denim Jeans",
       "category": "Men",
       "price": 150.0
     },
     {
       "id": 14,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans1-300x300.jpg",
-      "name": "Dark Brown Jeans",
+      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=50&w=250&h=250&fit=crop",
+      "name": "Polka Blue Shirt",
       "category": "Men",
       "price": 150.0
     },
     {
       "id": 15,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans4-300x300.jpg",
-      "name": "Dark Gray Jeans",
+      "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=50&w=250&h=250&fit=crop",
+      "name": "White Hat",
       "category": "Men",
       "price": 150.0
     },
     {
       "id": 15,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe5-300x300.jpg",
-      "name": "DNK Black Shoes",
+      "image": "https://images.unsplash.com/photo-1618354691792-d1d42acfd860?q=50&w=250&h=250&fit=crop",
+      "name": "DNK Black Benie",
       "category": "Women",
       "price": 175.0
     },
     {
       "id": 16,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe1-300x300.jpg",
-      "name": "DNK Blue Shoes",
+      "image": "https://images.unsplash.com/photo-1626947346165-4c2288dadc2a?q=50&w=250&h=250&fit=crop",
+      "name": "DNK Black Shoes",
       "category": "Men",
       "price": 200.0
     },
     {
       "id": 17,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/sports-shoe4-300x300.jpg",
-      "name": "DNK Green Shoes",
+      "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=50&w=250&h=250&fit=crop",
+      "name": "DNK Orange Shoes",
       "category": "Men",
       "price": 250.0,
       "bestSeller": true
     },
     {
       "id": 18,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt4-300x300.jpg",
+      "image": "https://images.unsplash.com/photo-1633966887768-64f9a867bdba?q=50&w=250&h=250&fit=crop",
       "name": "DNK Green Tshirt",
       "category": "Men",
       "price": 42.0
     },
     {
       "id": 19,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe2-300x300.jpg",
-      "name": "DNK Red Shoes",
+      "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?q=50&w=250&h=250&fit=crop",
+      "name": "Nike Red Shoes",
       "category": "Men",
       "price": 150.0
     },
     {
       "id": 20,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-300x300.jpg",
-      "name": "DNK Yellow Shoes",
+      "image": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=50&w=250&h=250&fit=crop",
+      "name": "High Top White Shoes",
       "category": "Men",
       "price": 150.0
     },
     {
       "id": 21,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans3-300x300.jpg",
-      "name": "Faint Washed Denim Blue Jeans",
-      "category": "Men",
+      "image": "https://images.unsplash.com/photo-1581101767113-1677fc2beaa8?q=50&w=250&h=250&fit=crop",
+      "name": "High Heel Gala Shoes",
+      "category": "Women",
       "price": 150.0
     },
     {
       "id": 22,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt3-300x300.jpg",
-      "name": "Flamingo Tshirt",
+      "image": "https://images.unsplash.com/photo-1643881080002-afdc695936e0?q=50&w=250&h=250&fit=crop",
+      "name": "Cream Swello Tshirt",
       "category": "Women",
       "price": 25.0
     },
     {
       "id": 23,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt7-300x300.jpg",
-      "name": "Gray Pattern Tshirt",
+      "image": "https://images.unsplash.com/photo-1598970435748-1f04b45d0b80?q=50&w=250&h=250&fit=crop",
+      "name": "Yellow Lemon Tshirt",
       "category": "Women",
       "price": 30.0
     },
     {
       "id": 24,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-hoodie3-300x300.jpg",
-      "name": "Green Hoodie",
-      "category": "Men",
+      "image": "https://images.unsplash.com/photo-1605732440685-d0654d81aa30?q=50&w=250&h=250&fit=crop",
+      "name": "Dark Leather Boots",
+      "category": "Female",
       "price": 150.0
     },
     {
       "id": 25,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt4-300x300.jpg",
-      "name": "Lemons Tshirt",
+      "image": "https://images.unsplash.com/photo-1620799139652-715e4d5b232d?q=50&w=250&h=250&fit=crop",
+      "name": "Plain White Tshirt",
       "category": "Women",
       "price": 25.0
     },
     {
       "id": 26,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag1-300x300.jpg",
+      "image": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?q=50&w=250&h=250&fit=crop",
       "name": "Light Brown Purse",
       "category": "Accessories",
       "price": 150.0
     },
     {
       "id": 27,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt1-300x300.jpg",
-      "name": "Purple Tshirt",
+      "image": "https://images.unsplash.com/photo-1621951753015-740c699ab970?q=50&w=250&h=250&fit=crop",
+      "name": "Blue Pavillon Tshirt",
       "category": "Women",
       "price": 25.0
     },
     {
       "id": 28,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-hoodie4.jpg-300x300.jpg",
-      "name": "Red Hoodie",
-      "category": "Men",
+      "image": "https://images.unsplash.com/photo-1508296695146-257a814070b4?q=50&w=250&h=250&fit=crop",
+      "name": "Pink Sunglasses",
+      "category": "Accessories",
       "price": 150.0
     },
     {
       "id": 29,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans3-300x300.jpg",
-      "name": "Slim Fit Blue Jeans",
+      "image": "https://images.unsplash.com/photo-1613151848917-80e67f421fff?q=50&w=250&h=250&fit=crop",
+      "name": "Warm Grey Socks",
       "category": "Women",
       "price": 150.0
     },
     {
       "id": 30,
-      "image": "https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/tshirt4-300x300.jpg",
-      "name": "White Underground Tshirt",
+      "image": "https://images.unsplash.com/photo-1618354691438-25bc04584c23?q=50&w=250&h=250&fit=crop",
+      "name": "Black Underground Tshirt",
       "category": "Women",
       "price": 150.0
     }
