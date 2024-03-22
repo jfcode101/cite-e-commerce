@@ -5,8 +5,7 @@
       "image": "https://images.unsplash.com/photo-1602751584581-2e0372975b46?q=50&w=250&h=250&fit=crop",
       "name": "Anchor Bracelet",
       "category": "Accessories",
-      "price": 150.0,
-      "bestSeller": true
+      "price": 150.0
     },
     {
       "id": 2,
@@ -20,8 +19,7 @@
       "image": "https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?q=50&w=250&h=250&fit=crop",
       "name": "White Hoodie",
       "category": "Men",
-      "price": 150.0,
-      "bestSeller": true
+      "price": 150.0
     },
     {
       "id": 4,
@@ -69,24 +67,25 @@
     {
       "id": 10,
       "image": "https://images.unsplash.com/photo-1605733513597-a8f8341084e6?q=50&w=250&h=250&fit=crop",
-      "name": "Pale Perl Purse With Chain",
+      "name": "Ivory-Perl Purse",
       "category": "Accessories",
-      "price": 150.0
+      "price": 150.0,
+      "bestSeller": true
     },
     {
       "id": 11,
       "image": "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?q=50&w=250&h=250&fit=crop",
       "name": "Bright Red Bag",
       "category": "Accessories",
-      "price": 100.0,
-      "bestSeller": true
+      "price": 100.0
     },
     {
       "id": 12,
       "image": "https://images.unsplash.com/photo-1615655114865-4cc1bda5901e?q=50&w=250&h=250&fit=crop",
       "name": "Buddha Earrings",
       "category": "Accessories",
-      "price": 150.0
+      "price": 150.0,
+      "bestSeller": true
     },
     {
       "id": 13,
@@ -100,7 +99,8 @@
       "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=50&w=250&h=250&fit=crop",
       "name": "Polka Blue Shirt",
       "category": "Men",
-      "price": 150.0
+      "price": 150.0,
+      "bestSeller": true
     },
     {
       "id": 15,
