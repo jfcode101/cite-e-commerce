@@ -8,76 +8,49 @@
     <script src="./scripts/product.js" defer></script>
   </head>
   <body>
-    <header class="header">Header Placeholder</header>
-    <main class="main">
-      <aside class="aside">
-        <div class="filter-block">
-          <form class="filter-search">
-            <input type="text" placeholder="Search products..." />
-            <button class="standard-button">Go</button>
-          </form>
-        </div>
-        <div class="filter-block">
-          <h3 class="filter-title">Filter by Price</h3>
-          <input type="range" min="0" max="1000" value="1000" step="10" class="filter-slider" id="filter-slider-id">
-          <div class="filter-max-price">
-            <button class="standard-button">Filter</button><span>Max price: <span id="label-slider-id">$1000</span></span>
+    <header class="cls-header">Header Placeholder</header>
+    <main class="cls-main">
+      <aside class="cls-aside">
+        <div class="cls-filter-block">
+          <div class="cls-filter-search">
+            <input type="text" placeholder="Search products..." id="id-filter-search-text"/>
+            <button class="cls-standard-button" id="id-filter-search-btn">Go</button>
           </div>
         </div>
-        <div class="filter-block">
-          <h3 class="filter-title">Categories</h3>
-          <ul>
-            <li class="filter-category-option">
-              <a href="#">Accessories</a><span>(7)</span>
+        <div class="cls-filter-block">
+          <h3 class="cls-filter-title">Filter by Price</h3>
+          <input type="range" min="0" max="1000" value="1000" step="10" class="cls-filter-slider" id="id-filter-slider">
+          <div class="cls-filter-max-price">
+            <button class="cls-standard-button" id="id-btn-filter">Filter</button><span>Max price: <span id="id-label-slider">$1000</span></span>
+          </div>
+        </div>
+        <div class="cls-filter-block">
+          <h3 class="cls-filter-title">Categories</h3>
+          <ul id="id-filter-category-list">
+            <li class="cls-filter-category-option">
+              <a>Accessories</a>
             </li>
-            <li class="filter-category-option">
-              <a href="#">Men</a><span>(14)</span>
+            <li class="cls-filter-category-option">
+              <a>Men</a>
             </li>
-            <li class="filter-category-option">
-              <a href="#">Women</a><span>(17)</span>
+            <li class="cls-filter-category-option">
+              <a>Women</a>
             </li>
           </ul>
         </div>
-        <div class="filter-block">
-          <h3 class="filter-title">Our Best Sellers</h3>
+        <div class="cls-filter-block">
+          <h3 class="cls-filter-title">Our Best Sellers</h3>
 
-          <ul class="mini-product-card-list">
-            <!-- This element is just a placeholder -->
-            <li class="mini-product-card">
-              <img
-                class="product-image"
-                src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag3-300x300.jpg"
-              />
-              <div>
-                <h4 class="product-name">Anchor Bracelet</h4>
-                <span class="product-category">Accessories</span>
-                <span class="product-price">$150.00</span>
-              </div>
-            </li>
-            <!-- This element is just a placeholder -->
+          <ul class="cls-mini-product-card-list">
           </ul>
         </div>
       </aside>
-      <section class="section">
-        <h3 class="result-count">Showing 1-12 of 31 results</h3>
-        <ul class="product-card-list">
-          <!-- This element is just a placeholder -->
-          <li class="product-card">
-            <a href="#">
-              <img
-                class="product-image"
-                src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag3-300x300.jpg"
-            /></a>
-            <a href="#">
-              <h4 class="product-name">Anchor Bracelet</h4>
-            </a>
-            <span class="product-category">Accessories</span>
-            <span class="product-price">$150.00</span>
-          </li>
-          <!-- This element is just a placeholder -->
+      <section class="cls-section">
+        <h3 id="id-result-count">Showing 1-12 of 31 results</h3>
+        <ul class="cls-product-card-list">
         </ul>
       </section>
     </main>
-    <footer class="footer">Footer Placeholder</footer>
+    <footer class="cls-footer">Footer Placeholder</footer>
   </body>
 </html>
