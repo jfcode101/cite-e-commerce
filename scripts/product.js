@@ -20,7 +20,7 @@ const handleSelectCategory = (event) => {
     const { origin, pathname } = window.location;
     const queryParams = objToQueryParam({
       ...queryParamToObj(),
-      category: anchor.textContent,
+      category: anchor.dataset.categoryId,
     });
     window.location.href = `${origin}${pathname}?${queryParams}`;
   }
@@ -92,25 +92,50 @@ const setupEventListeners = () => {
   }
 };
 
-const fetchProducts = async (category, maxPrice, prodName) => {
-  const response = await fetch("/mock-data/products.json");
+const fetchCategories = async () => {
+  const baseApi = "https://api.escuelajs.co/api/v1/categories";
+  const response = await fetch(baseApi);
   const data = await response.json();
-  return data.products.filter((product) => {
-    return (
-      (!category ||
-        product.category.toLowerCase() === category.toLowerCase()) &&
-      (!maxPrice || product.price <= maxPrice) &&
-      (!prodName || product.name.toLowerCase().includes(prodName.toLowerCase()))
-    );
-  });
+  return data;
+};
+
+const fetchProducts = async (category, maxPrice, prodName) => {
+  const baseApi = "https://api.escuelajs.co/api/v1/products";
+
+  const queryParams = [];
+
+  if (prodName) queryParams.push(`title=${prodName}`);
+  if (maxPrice) queryParams.push(`price_min=1&price_max=${maxPrice}`);
+  if (category) queryParams.push(`categoryId=${category}`);
+
+  const response = await fetch(
+    "https://api.escuelajs.co/api/v1/products" + "?" + queryParams.join("&")
+  );
+
+  const data = await response.json();
+
+  return data
+    .filter((p) => p.images.length === 3);
 };
 
 const fetchBestSellers = async () => {
-  const response = await fetch("/mock-data/products.json");
+  const response = await fetch(
+    "https://api.escuelajs.co/api/v1/products?price=39"
+  );
   const data = await response.json();
-  return data.products
-    .filter((product) => product.bestSeller)
-    .sort(() => (Math.random() > 0.5 ? 1 : -1));
+  return data
+};
+
+const renderCategories = (categories) => {
+  const productCardList = document.querySelector("#id-filter-category-list");
+  for (let category of categories) {
+    const listItem = document.createElement("li");
+    listItem.classList.add("cls-filter-category-option");
+    listItem.innerHTML = `
+        <a data-category-id=${category.id}>${category.name}</a>
+    `;
+    productCardList.appendChild(listItem);
+  }
 };
 
 const renderProductCards = (products, parentSelector, childSelector) => {
@@ -122,14 +147,14 @@ const renderProductCards = (products, parentSelector, childSelector) => {
       <a href="#">
         <img
           class="cls-product-image"
-          src="${product.image}"
+          src="${product.images[0]}"
         />
       </a>
       <div>
         <a href="#">
-          <h4 class="cls-product-name">${product.name}</h4>
+          <h4 class="cls-product-name">${product.title}</h4>
         </a>
-        <span class="cls-product-category">${product.category}</span>
+        <span class="cls-product-category">${product.category.name}</span>
         <span class="cls-product-price">${product.price}.00</span>
       </div>
     `;
@@ -144,9 +169,9 @@ const loadCurrentQueryParams = () => {
   document.querySelector(
     "#id-label-slider"
   ).textContent = `$${currConfig.maxPrice}`;
-  document.querySelector("#id-result-count").textContent = `Results for ${
-    currConfig.category ? currConfig.category.toLowerCase() : ""
-  } items below $${currConfig.maxPrice}`;
+  document.querySelector("#id-result-count").textContent = `Result for items ${
+    currConfig.category ? 'in Category ' + currConfig.category.toLowerCase() : ""
+  } below $${currConfig.maxPrice}`;
   return currConfig;
 };
 
@@ -161,6 +186,9 @@ const main = async () => {
     "cls-mini-product-card-list",
     "cls-mini-product-card"
   );
+
+  const categories = await fetchCategories();
+  renderCategories(categories, products);
 
   setupEventListeners();
 };
