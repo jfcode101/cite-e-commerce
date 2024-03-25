@@ -96,7 +96,11 @@ const fetchCategories = async () => {
   const baseApi = "https://api.escuelajs.co/api/v1/categories";
   const response = await fetch(baseApi);
   const data = await response.json();
-  return data;
+  return data.filter((category) =>
+    ["Clothes", "Electronics", "Furniture", "Shoes", "Miscellaneous"].includes(
+      category.name
+    )
+  );
 };
 
 const fetchProducts = async (category, maxPrice, prodName) => {
@@ -114,8 +118,7 @@ const fetchProducts = async (category, maxPrice, prodName) => {
 
   const data = await response.json();
 
-  return data
-    .filter((p) => p.images.length === 3);
+  return data.filter((p) => p.images.length === 3);
 };
 
 const fetchBestSellers = async () => {
@@ -123,7 +126,7 @@ const fetchBestSellers = async () => {
     "https://api.escuelajs.co/api/v1/products?price=39"
   );
   const data = await response.json();
-  return data
+  return data;
 };
 
 const renderCategories = (categories) => {
@@ -170,7 +173,9 @@ const loadCurrentQueryParams = () => {
     "#id-label-slider"
   ).textContent = `$${currConfig.maxPrice}`;
   document.querySelector("#id-result-count").textContent = `Result for items ${
-    currConfig.category ? 'in Category ' + currConfig.category.toLowerCase() : ""
+    currConfig.category
+      ? "in Category " + currConfig.category.toLowerCase()
+      : ""
   } below $${currConfig.maxPrice}`;
   return currConfig;
 };
