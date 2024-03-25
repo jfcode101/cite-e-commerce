@@ -1,0 +1,80 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.cls-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.cls-footer .cls-logo {
+  margin-bottom: 3rem;
+}
+
+.cls-footer-section {
+  width: 100%;
+  background-color: var(--white);
+  border-top: 1px solid var(--chinese-silver);
+  padding: 3rem 0;
+  color: var(--chinese-silver);
+}
+
+.cls-footer-section .cls-title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--dark);
+}
+
+.cls-footer-section > .wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 1rem;
+  display: flex;
+}
+
+.cls-quick-links {
+  margin-top: 1rem;
+}
+
+.cls-quick-links > li {
+  font-size: 0.9rem;
+  margin: 0.7rem 0;
+}
+
+.cls-footer-social {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.cls-footer-social a {
+  text-decoration: none;
+}
+
+.cls-footer-section > .wrapper.center {
+  justify-content: center;
+}
+
+.cls-footer-section > .wrapper.space-middle {
+  justify-content: space-between;
+}
+
+.cls-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 15%;
+}
+
+.cls-subscribe-form > input {
+  border: 1px solid var(--chinese-silver);
+  line-height: 1.8;
+  padding: 6px 8px;
+  border-radius: 0;
+  margin: 1rem 0;
+}
+
+.cls-subscribe-form > button {
+  padding: 0.8rem;
+  background-color: var(--light-blue);
+  color: white;
+  cursor: pointer;
+  border: 0;
+}
