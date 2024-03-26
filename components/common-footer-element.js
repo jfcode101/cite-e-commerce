@@ -9,7 +9,7 @@ const template = `
     </section>
     <section class="cls-footer-section">
       <div class="wrapper space-middle">
-        <div class="cls-column">
+        <div class="cls-column grow">
           <img
             src="https://my-awesome-react-project.netlify.app/img/logo.svg"
             width="150px"
