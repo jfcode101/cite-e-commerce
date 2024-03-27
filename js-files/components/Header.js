@@ -43,12 +43,33 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wgh
 export class Header extends HTMLElement {
   constructor() {
     super();
-
-    // attach shadow tree and returns shadow root reference
+    // #1: attach shadow tree and returns shadow root reference
+    // #2:create a shadow root
     this.attachShadow({ mode: "open" });
-    // create a shadow
     this.shadowRoot.appendChild(tmplt.content.cloneNode(true));
   }
 
-  connectedCallback() {}
+  connectedCallback() {
+    this.clickListener();
+  }
+
+  disconnectedCallback() {}
+
+  clickListener() {
+    this.shadowRoot
+      .querySelector(".cls-check")
+      .addEventListener("click", (e) => {
+        this.toggle(e);
+      });
+  }
+
+  toggle(e) {
+    if (e.target.textContent === "menu") {
+      e.target.style.display = "none";
+      e.target.nextElementSibling.style.display = "block";
+    } else {
+      e.target.previousElementSibling.style.display = "block";
+      e.target.style.display = "none";
+    }
+  }
 }

@@ -84,7 +84,7 @@ li {
 }
 
 #id-menu {
-  /* display: none; */
+  display: block;
 }
 
 #id-close {
@@ -130,7 +130,7 @@ p {
   background-color: rgba(22, 100, 142, 0.95);
 
   padding: 32px 32px;
-  width: 70%;
+  width: 80%;
   min-height: 100vh;
   position: fixed;
   top: 100px;

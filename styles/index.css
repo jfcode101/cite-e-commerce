@@ -12,7 +12,7 @@
 
 .cls-wrapper {
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
   background-color: var(--sapphire-blue-2);
 
@@ -102,7 +102,7 @@
 
 .trial {
   position: relative;
-  top: 100vh;
+  top: 200vh;
   background-color: rosybrown;
   height: 200vh;
 }
