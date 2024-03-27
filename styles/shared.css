@@ -41,13 +41,14 @@ li {
 }
 
 .cls-main-header {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: var(--sapphire-blue);
-  height: 80px;
+  position: fixed;
+  top: 0;
+  background-color: rgba(22, 100, 142, 0.95);
+  color: var(--white);
+  height: 100px;
   width: 100%;
   box-shadow: 0 2px 4px -3px var(--dark);
-  z-index: 99;
+  z-index: 999;
   padding: 0 32px;
 }
 
@@ -107,14 +108,14 @@ li {
 .cls-nav-sect-link span {
   /* background-color: yellowgreen; */
   /* height: 100%; */
-  line-height: 80px;
-  color: var(--sapphire-blue);
+  line-height: 100px;
+  color: var(--white);
   font-size: 1.5rem;
 }
 
 p {
   /* background-color: turquoise; */
-  line-height: 80px;
+  line-height: 100px;
 }
 
 .cls-navbar {
@@ -125,12 +126,14 @@ p {
 }
 
 .cls-nav-list {
-  background-color: var(--sapphire-blue);
+  /* background-color: var(--sapphire-blue); */
+  background-color: rgba(22, 100, 142, 0.95);
+
   padding: 32px 32px;
   width: 70%;
   min-height: 100vh;
   position: fixed;
-  top: 80px;
+  top: 100px;
   right: -200%;
   transition: all 0.3s ease-in-out;
 }
